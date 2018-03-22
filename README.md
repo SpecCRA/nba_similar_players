@@ -6,7 +6,8 @@
 ## Notes
 * Data is subsetted to `>= 27 games` played and `>= 450` minutes played. The intention was to reduce noise from players who contributed very little to the season.
 * I outputted 8 similar player seasons because some of them are unsurprisingly similar to themselves.
-* `Recent season` is defined any season after 2010-11.
+* **Recent** season is defined any season after 2010-11.
+* I chose to drop totals and per 100p statistics because they'd output similar players that are themselves too often.
 * I will make a blog post after I figure out how to visually display the data nicely.
 
 ## Possible Improvements
