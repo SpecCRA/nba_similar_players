@@ -1,0 +1,16 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 There are a few points I want to address in more detail about my design choices and why. \
+\
+1. All the dataset issues can be addressed in the other repository, nba_data_scapers.\
+\
+2. I chose to subset the data for players who have played more than 26 games and 450 minutes total to eliminate any noisy data with advanced and per 36 minute statistics. 27 games is about a third of the season. Popovich famously plays everyone bit by bit, so sometimes, key players have very little time played. In this case, Speedy Claxton who closed out finals games didn\'92t play 500 total minutes in the season. This does make the comparison data a little noisier because it includes players spanning the 1981 - 2017 seasons.\
+\
+3. I dropped the per 100 and totals statistics primarily to reduce noise. When I did include them, the algorithm would spit out mostly the exact same player, unsurprisingly. Leaving out per 100 statistics makes sense because it may inflate statistics of players who are on the lower end of games played and/or minutes played. Totals are also bad because I am not trying to match durability, just production. I believe totals while they measure important performance differences, primarily measure durability. \
+\
+4. Data is standardized and scaled so statistics such as points with bigger numbers don\'92t hold too much weight. This is just in preparation for using KDTree. I originally thought of using KNearestNeighbors, but I am an idiot and didn\'92t realize that was a classifier, not for queries.}
